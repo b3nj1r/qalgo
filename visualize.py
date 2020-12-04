@@ -15,17 +15,18 @@ ax = fig.add_subplot(111)
 
 # draw chart from data
 ax = data.draw_chart(ax, data.sec_hist, 'green','red')
-
+ax = process.sma(ax, data.sec_hist, 'white')
 # plot grid
 ax.grid(linestyle='-', linewidth=1, color='#4a4a4a', zorder=1)
 
 # axis lable formatting
 ax.set_xticks(list(data.sec_hist['bar'])[::5])
 ax.set_xticklabels(list(data.sec_hist['Date'].dt.strftime('%m-%d'))[::5])
+plt.xticks(rotation=90)
 
 # print security information
 print(data.sec_hist.head())
 
 # save and display plot
-plt.savefig('out.png')
+plt.savefig('sma.png')
 plt.show()
