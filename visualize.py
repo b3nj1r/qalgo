@@ -15,7 +15,8 @@ ax = fig.add_subplot(111)
 
 # draw chart from data
 ax = data.draw_chart(ax, data.sec_hist, 'green','red')
-ax = process.sma(ax, data.sec_hist, 'white')
+ax = process.sma(15, ax, data.sec_hist, 'yellow')
+ax = process.sma(5, ax, data.sec_hist, 'white')
 # plot grid
 ax.grid(linestyle='-', linewidth=1, color='#4a4a4a', zorder=1)
 
