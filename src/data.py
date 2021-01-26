@@ -6,8 +6,8 @@ import pandas as pd
 import matplotlib as mpl
 
 # get security history
-sec = yf.Ticker('TSLA')
-sec_hist = sec.history(period='120d')
+sec = yf.Ticker('AMD')
+sec_hist = sec.history(period='256d')
 sec_hist.reset_index(inplace=True)
 
 # get bars
