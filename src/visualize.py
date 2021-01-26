@@ -14,7 +14,7 @@ fig = plt.figure(figsize=(10,5))
 ax = fig.add_subplot(111)
 
 # draw chart from data
-ax = data.draw_chart(ax, data.sec_hist, 'white','#101010')
+ax = data.draw_chart(ax, data.sec_hist, 'white','#a4a4a4')
 ax = process.sma(15, ax, data.sec_hist, '#2a2a2a')
 ax = process.sma(5, ax, data.sec_hist, '#6a6a6a')
 
